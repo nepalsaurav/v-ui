@@ -4,8 +4,10 @@
 @import 'color';
 @import 'typography';
 @import 'borders'; // 3️⃣ Override Bootstrap variables BEFORE importing main Bootstrap
+
+
 // Colors
-$primary: #444;
+$primary: $primary;
 
 // input
 $input-bg: $gray-100;
