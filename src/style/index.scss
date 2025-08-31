@@ -1,0 +1,40 @@
+// 1️⃣ Import Bootstrap functions first
+@import 'bootstrap/scss/functions';
+
+@import 'color';
+@import 'typography';
+@import 'borders'; // 3️⃣ Override Bootstrap variables BEFORE importing main Bootstrap
+// Colors
+$primary: #444;
+
+// input
+$input-bg: $gray-100;
+$input-focus-bg: $gray-100;
+$input-placeholder-color: $gray-500;
+$input-disabled-bg: $gray-200;
+$input-color: $text-color;
+$input-box-shadow: none;
+$input-focus-border-color: $gray-500;
+$input-border-radius: $border-radius;
+$input-btn-focus-width: 2px;
+
+// Theme colors map
+$theme-colors: (
+  'primary': $primary,
+);
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+$theme-colors: map-remove($theme-colors, 'info', 'light', 'dark', 'success', 'warning');
+
+// 4️⃣ Import Bootstrap main SCSS
+@import 'bootstrap/scss/bootstrap';
+
+// 5️⃣ Import Rubik font
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+// 6️⃣ Apply Rubik font globally
+html,
+body {
+  font-family: 'Inter', sans-serif;
+}
